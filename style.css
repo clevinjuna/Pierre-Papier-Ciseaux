@@ -1,0 +1,19 @@
+img {
+    margin: 0 auto;
+    height: 200px;
+    visibility: hidden;
+}
+
+#choix, #choix_ord {
+    display:inline-block;
+    height: 400px;
+    width: 600px;
+}
+
+.show {
+    visibility: visible;
+}
+
+.hide {
+    visibility: hidden;
+}
