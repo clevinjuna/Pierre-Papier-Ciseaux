@@ -17,7 +17,18 @@ score.innerHTML = score_p;
 score_o.innerHTML = score_po;
 
 bouton_rejouer.addEventListener('click', () => {
-    console.log("bouton_rejouer")
+    console.log("bouton_rejouer");
+    coup_ord = 0;
+    coup = 0;
+    score_p = 0;
+    score_po = 0;
+    score.innerHTML = 0;
+    res.innerHTML = "resultat";
+    score_o.innerHTML = 0;
+
+    choix.style.backgroundImage = "url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fpodcasts.challenges.fr%2Fhome%2Fattachment%2Fbackground-white%2F&psig=AOvVaw1PP2ZvK8eZeBUQ7b-Scael&ust=1646149920338000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCNjxkLzgovYCFQAAAAAdAAAAABAD')";
+    choix_ord.style.backgroundImage = "url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fpodcasts.challenges.fr%2Fhome%2Fattachment%2Fbackground-white%2F&psig=AOvVaw1PP2ZvK8eZeBUQ7b-Scael&ust=1646149920338000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCNjxkLzgovYCFQAAAAAdAAAAABAD')";
+    
     });
 
 
@@ -70,9 +81,6 @@ function coup_ordi() {
 function resultat() {
     console.log(coup_ord)
     if(coup == 0){
-        if(coup_ord == 0) {
-            res.innerHTML = "égalité";
-        }
         if(coup_ord == 1) {
             res.innerHTML = "perdu";
             score_po = score_po + 1;
@@ -89,9 +97,6 @@ function resultat() {
             res.innerHTML = "gagné";
             score_p = score_p + 1;
             score.innerHTML = score_p;
-        }
-        if(coup_ord == 1) {
-            res.innerHTML = "égalité";
         }
         if(coup_ord == 2) {
             res.innerHTML = "perdu";
@@ -110,10 +115,10 @@ function resultat() {
             score_p = score_p + 1;
             score.innerHTML = score_p;
         }
-        if(coup_ord == 2) {
-            res.innerHTML = "éalité";
-        }
     }  
+    if(coup == coup_ord) {
+        res.innerHTML = "égalité";
+    }
 }
 
 function affiche_choix_ordi() {
