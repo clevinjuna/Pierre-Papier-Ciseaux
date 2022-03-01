@@ -26,8 +26,8 @@ bouton_rejouer.addEventListener('click', () => {
     res.innerHTML = "resultat";
     score_o.innerHTML = 0;
 
-    choix.style.backgroundImage = "url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fpodcasts.challenges.fr%2Fhome%2Fattachment%2Fbackground-white%2F&psig=AOvVaw1PP2ZvK8eZeBUQ7b-Scael&ust=1646149920338000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCNjxkLzgovYCFQAAAAAdAAAAABAD')";
-    choix_ord.style.backgroundImage = "url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fpodcasts.challenges.fr%2Fhome%2Fattachment%2Fbackground-white%2F&psig=AOvVaw1PP2ZvK8eZeBUQ7b-Scael&ust=1646149920338000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCNjxkLzgovYCFQAAAAAdAAAAABAD')";
+    choix.style.backgroundImage = "url('')";
+    choix_ord.style.backgroundImage = "url('')";
     
     });
 
@@ -35,7 +35,7 @@ bouton_rejouer.addEventListener('click', () => {
 
 bouton_pierre.addEventListener('click', () => {
     console.log(choix)
-    choix.style.backgroundImage = "url('./pierre-magnesite.jpg')" ;
+    choix.style.backgroundImage = "url('/img/pierre-magnesite.jpg')" ;
     choix.style.backgroundRepeat = "no-repeat" ;
     choix.style.height ="400px";
     choix.style.width ="600px";
@@ -48,7 +48,7 @@ bouton_pierre.addEventListener('click', () => {
 
 
 bouton_feuille.addEventListener('click', () => {
-    choix.style.backgroundImage = "url('./papier.jpg')" ;
+    choix.style.backgroundImage = "url('/img/papier.jpg')" ;
     choix.style.backgroundRepeat = "no-repeat" ;
 
 
@@ -61,7 +61,7 @@ bouton_feuille.addEventListener('click', () => {
 
 
 bouton_ciseaux.addEventListener('click', () => {
-    choix.style.backgroundImage = "url('./ciseaux.jpg')" ;
+    choix.style.backgroundImage = "url('/img/ciseaux.jpg')" ;
     choix.style.backgroundRepeat = "no-repeat" ;
 
     coup = 2;
@@ -123,15 +123,15 @@ function resultat() {
 
 function affiche_choix_ordi() {
     if (coup_ord == 0) {
-        choix_ord.style.backgroundImage = "url('./pierre-magnesite.jpg')" ;
+        choix_ord.style.backgroundImage = "url('/img/pierre-magnesite.jpg')" ;
         choix_ord.style.backgroundRepeat = "no-repeat" ;
     }
     if (coup_ord == 1) {
-        choix_ord.style.backgroundImage = "url('./papier.jpg')" ;
+        choix_ord.style.backgroundImage = "url('/img/papier.jpg')" ;
         choix_ord.style.backgroundRepeat = "no-repeat" ;
     }
     if (coup_ord == 2) {
-        choix_ord.style.backgroundImage = "url('./ciseaux.jpg')" ;
+        choix_ord.style.backgroundImage = "url('/img/ciseaux.jpg')" ;
         choix_ord.style.backgroundRepeat = "no-repeat" ;
     }
 }
